@@ -1,0 +1,9 @@
+.git
+.firebase
+.firebaserc
+firebase.json
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+install_gcloud.ps1
