@@ -98,6 +98,10 @@ app.post('/chat', async (req, res) => {
     }
 });
 
+app.get('/healthz', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
 // Serve frontend
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
