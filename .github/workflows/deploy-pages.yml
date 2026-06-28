@@ -28,10 +28,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Copy site files
+        run: |
+          mkdir -p site
+          cp -R ELECTION_GUIDE_AI-main/. site/
+          touch site/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './ELECTION_GUIDE_AI-main'
+          path: './site'
 
       - name: Deploy to GitHub Pages
         id: deployment
